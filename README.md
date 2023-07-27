@@ -14,8 +14,8 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/WebdevShefali/ip-address-tracker)
+- Live Site URL: (https://ipaddresstrackerwebapp.netlify.app)
 
 
 
