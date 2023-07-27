@@ -1,38 +1,158 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+.header,
+.attribution {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-image: url(./images/pattern-bg-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  padding-top: 3%;
+  color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  font-weight: bold;
+  padding-bottom: 3%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header input,
+.header button {
+  height: 60px;
+  outline: none;
+  border: none;
+}
+.header input {
+  width: 500px;
+  padding: 10px;
+}
+.header input,
+.details p {
+  font-size: 18px;
+}
+.header .btnBox,
+.details {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.header .btnBox {
+  width: 550px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+.header button,
+.details {
+  position: absolute;
+}
+.header button {
+  width: 70px;
+  background-color: black;
+  right: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+.header button:hover {
+  background-color: hsl(0, 0%, 17%);
+}
+.leaflet-container,
+#map {
+  width: 100%;
+  height: 70vh;
+}
+.details {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 70vw;
+  margin-left: 15%;
+  top: 30%;
+  z-index: 999;
+  height: 200px;
+  padding-top: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.details p {
+  font-weight: 500;
+  color: hsl(0, 0%, 59%);
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.details div {
+  width: 20%;
+}
+.details h4 {
+  font-size: 1.2rem;
+}
+.details .line {
+  height: 60%;
+  width: 1px;
+  background-color: hsl(0, 0%, 59%);
+  margin-top: 2%;
+  margin-right: 3%;
+}
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Media queries */
+@media only screen and (max-width: 1024px) {
+  .details {
+    width: 80vw;
+    margin-left: 10%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 425px) {
+  .header {
+    background-image: url(./images/pattern-bg-mobile.png);
+  }
+  .header input {
+    width: 350px;
+  }
+  .header .btnBox {
+    width: 400px;
+  }
+  .header button {
+    width: 50px;
+  }
+  .header h1 {
+    padding-bottom: 5%;
+  }
+  .details {
+    flex-direction: column;
+    height: max-content;
+    padding: 10px;
+    text-align: center;
+    top: 23%;
+  }
+  .details div {
+    width: 100%;
+  }
+  .details .line {
+    display: none;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .header input {
+    width: 300px;
+  }
+  .header .btnBox {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .header input {
+    width: 250px;
+  }
+  .header .btnBox {
+    width: 300px;
   }
 }
