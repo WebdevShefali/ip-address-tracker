@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import locIcon from "../images/icon-location.svg";
 import arrowIcon from "../images/icon-arrow.svg";
+import Swal from 'sweetalert2'
 const api_key = process.env.REACT_APP_API_KEY;
 const Home = () => {
   const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${api_key}`;
@@ -84,12 +85,13 @@ const Home = () => {
       { icon: locationIcon }
     ).addTo(map);
     } catch (error) {
-       alert("Please enter a valid ip address.") 
+       Swal.fire("Please enter a valid ip address.");
     }
     
   };
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, []);
   return (
     <div>
