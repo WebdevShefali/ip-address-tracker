@@ -5,7 +5,6 @@ import locIcon from "../images/icon-location.svg";
 import arrowIcon from "../images/icon-arrow.svg";
 import Swal from "sweetalert2";
 const api_key = process.env.REACT_APP_API_KEY;
-console.log(api_key);
 const Home = () => {
   const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${api_key}`;
   const getData = async () => {
